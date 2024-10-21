@@ -40,11 +40,11 @@
     }
   }
   &__button-wrapper {
-    align-self: end;
+    @include mobile-above {
+      align-self: end;
+    }
   }
   &__button {
-    @include mobile {
-        width: 380px;
-    }
+    width: 100%;
   }
 }

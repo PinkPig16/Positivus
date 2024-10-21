@@ -10,7 +10,7 @@
   padding: 50px;
 
   @include mobile {
-    max-width: 370px;
+    max-width: 330px;
     display: grid;
     grid-template-columns: auto auto;
     row-gap: 27px;

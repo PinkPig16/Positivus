@@ -896,7 +896,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .services-card {
-    max-width: 370px;
+    max-width: 330px;
     display: grid;
     grid-template-columns: auto auto;
     row-gap: 27px;
@@ -1014,7 +1014,7 @@ h4 {
   flex-direction: column;
   row-gap: 26px;
   align-items: start;
-  padding: 60px;
+  padding: 30px;
 }
 .banner__description {
   max-width: 500px;
@@ -1235,13 +1235,13 @@ h4 {
 .team-card__link-img {
   float: left;
 }
-.team__button-wrapper {
-  align-self: end;
-}
-@media (max-width: 767px) {
-  .team__button {
-    width: 380px;
+@media (min-width: 768px) {
+  .team__button-wrapper {
+    align-self: end;
   }
+}
+.team__button {
+  width: 100%;
 }
 
 .reviews {
@@ -1263,7 +1263,7 @@ h4 {
 }
 .reviews__slider {
   --reviewsSliderWidth: 606px;
-  --reviewsSliderWidthMobile: 330px;
+  --reviewsSliderWidthMobile: 280px;
 }
 .reviews__slider-list {
   display: flex;
