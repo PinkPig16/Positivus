@@ -1,0 +1,101 @@
+.process {
+
+  --rotateDeg: 90deg;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    counter-reset: custom-counter;
+
+     
+    @include mobile {
+      row-gap: 20px;
+    }
+  }
+
+  &__item {
+    --counterContent: counter(custom-counter);
+    
+    counter-increment: custom-counter;
+    cursor: pointer;
+
+    &:nth-child(-n + 9) {
+      --counterContent: '0' counter(custom-counter);
+    }
+  }
+
+  &__accordion {
+
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius-large);
+    border: var(--border);
+    box-shadow: var(--shadow);
+    padding: 40px 60px;
+    @include mobile {
+        padding: 30px;
+      }
+
+    &[open] {
+      background-color: var(--color-accent);
+      --rotateDeg: 0;
+    }
+
+
+    &-header {
+      display: flex;
+      flex-direction: row;
+      row-gap: 40px;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      @include mobile {
+        column-gap: 25px
+      }
+    }
+    &-indicator {
+      @include flex-center;
+      @include square(58px);
+      @include mobile {
+        width: 30px;
+      }
+      flex-shrink: 0;
+      position: relative;
+      border: var(--border);
+      background-color: var(--color-gray);
+
+      border-radius: 50%;
+      &::after,
+      &::before {
+        @include abs-center;
+        content: '';
+        background-color: var(--color-dark);
+        width: 45%;
+        height: 10%;
+      }
+      &::before {
+        rotate: var(--rotateDeg);
+      }
+    }
+    &-title {
+      @include fluid-font(18,30);
+      
+      display: flex;
+      align-items: center;
+      column-gap: 25px;
+    
+      @include mobile {
+        column-gap: 33px;
+      }
+      &::before {
+        content: var(--counterContent);
+        font-size: 2em;
+      }
+    }
+    &-body {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: var(--border);
+    }
+  }
+}

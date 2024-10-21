@@ -1,0 +1,19 @@
+.contact-us {
+
+  &__title {
+    @include fluid-font(18,20);
+    text-align: center;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    row-gap: 20px;
+    
+    @include mobile {
+      row-gap: 15px;
+      text-align: center;
+
+    }
+  }
+}

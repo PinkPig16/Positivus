@@ -1,0 +1,35 @@
+.section {
+  padding-bottom: var(--padding-section-y);
+  padding-top: var(--padding-section-y);
+
+  @include mobile {
+    padding-bottom: var(--padding-section-y-mobile);
+    padding-top: var(--padding-section-y-mobile);
+  }
+  &__header {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+      row-gap: 30px;
+    }
+    &:not(:last-child) {
+      padding-bottom: 80px;
+      
+      @include mobile {
+        padding-bottom: 40px;
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      text-align : center;
+      row-gap: 30px;
+      padding-bottom: 40px;
+    }
+  }
+
+}

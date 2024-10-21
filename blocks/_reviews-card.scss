@@ -1,0 +1,40 @@
+.reviews-card {
+
+  --reviewsCornerWidth: 40px;
+  --reviewsCornerOffsetLeft: 52px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 45px;
+
+  &__body {
+    @include mobile {
+      padding: 30px;
+    }
+    padding:48px var(--reviewsCornerOffsetLeft) 52px;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--border-radius-large);
+    position: relative;
+    &:after {
+        @include square(var(--reviewsCornerWidth));
+    
+        content: '';
+        border: inherit;
+        position: absolute;
+        background-color: var(--color-dark);
+        clip-path: polygon(0 100%, 100% 100%, 100% 0);
+        top: 100%;
+        left: var(--reviewsCornerOffsetLeft);
+        translate: 0 -50%;
+        rotate: 45deg;
+    }
+  }
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: calc(var(--reviewsCornerOffsetLeft) + 
+    var(--reviewsCornerWidth) /2 )
+  }
+  &__name {
+    color: var(--color-accent);
+  }
+}

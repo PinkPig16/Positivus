@@ -1,0 +1,28 @@
+:root {
+    --color-dark: rgb(25, 26, 35);
+    --color-gray: rgb(243, 243, 243);
+    --color-accent: rgb(185, 255, 102);
+    --color-light: #FFFF;
+    --color-gray-alt: #898989;
+    --color-dark-alt: #292A32;
+
+    --border-radius: 14px;
+    --border-radius-small: 7px;
+    --border-radius-large: 45px;
+    --border: 1px solid var(--color-dark);
+    --border-gray: 1px solid var(--color-gray-alt);
+    --shadow: 0px 5px 0px 0px var(--color-dark);
+
+    --font-base: 'Space Grotesk', 'sans-serif';
+    --font-base-medium: 'Space Grotesk medium', 'sans-serif';
+    --font-base-large: 'Space Grotesk large', 'sans-serif';
+    
+    --container-width: 1220px;
+    --container-padding-x: 20px;
+    --padding-section-y: 70px;
+    --padding-section-y-mobile: 30px;
+    --input-height: 59px;
+    --button-height: 68px;
+    --transition-duration: 0.2s;
+
+}

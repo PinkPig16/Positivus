@@ -1,0 +1,46 @@
+.contact {
+
+  position: relative;
+  background-color: var(--color-gray);
+  padding: 60px 80px 100px;
+  border-radius: var(--border-radius);
+  overflow-x: hidden;
+
+  @include mobile {
+    padding: 30px 40px;
+  }
+  &::after {
+    @include mobile {
+        content: none;
+    }
+    --contactOffsetY: 60px;
+
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    translate: -50% -50%;
+    height: calc(100% - var(--contactOffsetY) * 2);
+    aspect-ratio: 1;
+    background: url(/img/contact-us.svg) center/contain no-repeat;
+
+  }
+  &__form,
+  &__body {
+    display: flex;
+    flex-direction: column;
+    column-gap: 40px;
+  }
+  &__form {
+    max-width: 50%;
+    row-gap: 40px;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+  &__body {
+    row-gap: 25px;
+
+  }
+}

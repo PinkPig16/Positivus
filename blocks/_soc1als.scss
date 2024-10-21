@@ -1,0 +1,19 @@
+.soc1als {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  &__link {
+    @include square(30px);
+    @include flex-center;
+    position: relative;
+    border-radius: 50%;
+    background-color: var(--color-light);
+
+    svg {
+      @include abs-center;
+      color: var(--color-dark);
+    }
+  }
+}

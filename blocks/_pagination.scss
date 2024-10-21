@@ -1,0 +1,18 @@
+.pagination {
+  &__list {
+    display: flex;
+  }
+  &__button {
+    @include reset-button;
+    @include square(24px);
+    @include hover {
+      color: var(--color-accent); 
+    }
+
+    color: var(--color-light);
+
+    &.is-current {
+      color: var(--color-accent);
+    }
+  }
+}

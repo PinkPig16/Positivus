@@ -1,0 +1,20 @@
+.subscribe-form {
+  background-color: var(--color-dark-alt);
+  border-radius: var(--border-radius);
+  padding: 58px 40px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+
+  @include mobile {
+    width: 100%;
+    padding: 30px;
+    flex-direction: column;
+    row-gap: 22px;
+  }
+  &__button {
+    @include mobile {
+      height: var(--button-height);
+    }
+  }
+}

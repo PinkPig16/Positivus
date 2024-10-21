@@ -1,0 +1,28 @@
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 14px;
+  &__item {
+    cursor: pointer;
+  }
+  &__emulator {
+    @include square(28px);
+    border: 1px solid var(--color-dark);
+    border-radius: 50%;
+    position: relative;
+    
+    &::after {
+      @include square(16px);
+      @include abs-center;
+      content: '';
+      border-radius: 50%;
+      background-color: var(--color-accent);
+    }
+  }
+  &__input {
+    &:not(:checked) + .radio__emulator::after {
+      opacity: 0;
+    }
+  }
+}

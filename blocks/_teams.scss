@@ -1,0 +1,50 @@
+.team {
+  @include fluid-font(16,18);
+  line-height: 26px;
+  display: flex;
+  row-gap: 40px;
+  flex-direction: column;
+  &__item {
+    border-radius: var(--border-radius-large);
+    border: var(--border);
+    box-shadow: var(--shadow);
+    padding: 40px 35px
+
+  }
+  &-card {
+    &__header {
+      display: flex;
+      flex-direction: row;
+      text-align: start;
+      column-gap: 15px;
+      border-bottom: var(--border);
+      padding-bottom: 28px;
+      position: relative;
+    }
+    &__data {
+      align-self: flex-end;
+    }
+    &__description {
+      padding-top: 28px;
+    }
+    &__link {
+      @include hover {
+        opacity: 0.7;
+      }
+      position: absolute;
+      right: 0;
+      flex-shrink: 0;
+      &-img {
+        float: left;
+      }
+    }
+  }
+  &__button-wrapper {
+    align-self: end;
+  }
+  &__button {
+    @include mobile {
+        width: 380px;
+    }
+  }
+}
